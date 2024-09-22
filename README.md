@@ -27,7 +27,7 @@ This project implements an interactive ordering system for a food truck. Custome
 ictionaries, loops, and input validation.
 * **Menu Support File:** The menu dictionary, provided as a support file during the course, was used as the primary dataset for the project.
 * **ChatGPT Assistance:** As an experienced data scientist, I used ChatGPT for help with syntax corrections and general optimizations. While the logic and structure of the project were independently developed, ChatGPT provided additional support to ensure clean and efficient code.
---- 
+
 5. ## Conclusion
 This Food Truck Ordering System project demonstrates practical applications of Python programming concepts like data structures, loops, and input validation. It satisfies all challenge requirements and delivers a functional, user-friendly ordering system.
 

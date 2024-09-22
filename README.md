@@ -14,7 +14,13 @@ This project implements an interactive ordering system for a food truck. Custome
 2. ## Features
 - **Categorized Menu**: Items are organized into Snacks, Meals, Drinks, and Desserts.
 - **User Interaction**: Customers can select items by number and specify quantities.
-- **Input Validation**: The system checks for valid inputs for menu selections and quantities.
+- **Quantity Input Validation**: Implemented checks to ensure that the quantity entered by the user is a positive integer. If the user enters an invalid quantity (like zero or a negative number), they are prompted to confirm if they want to proceed with a default quantity of 1.
+User Confirmation for Quantity:
+> After entering an invalid quantity, the program now asks the user if they would like to change their quantity before proceeding with the order.
+- **Improved User Prompts**:Updated input prompts for clarity, removing references to default quantities in the prompt messages to enhance user experience.
+- **Robust Error Handling:**Added checks for invalid selections and quantities, ensuring the program can handle user input more gracefully and avoid unexpected behavior.
+- **Enhanced Code Readability:**Improved code structure and organization to enhance maintainability and readability.
+- **Testing:** Verified that the program handles various edge cases correctly, such as invalid menu selections and quantity inputs.
 - **Order Summary**: Receives a formatted receipt displaying item names, prices, quantities, and total cost.
 
 3. ## Code Structure

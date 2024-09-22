@@ -72,7 +72,6 @@ while place_order:
     menu_category = input("Type menu number: ")
 
     # Check if input is a digit and valid
-    # Step 3: Validate the input
     if menu_category.isdigit() and int(menu_category) in range(1, len(menu) + 1):
         # Retrieve the menu category name based on user input
         menu_category_name = list(menu.keys())[int(menu_category) - 1]
@@ -100,40 +99,37 @@ while place_order:
         menu_selection = input("Please enter the item number you wish to order: ")
 
         # Step 5: Validate the menu selection input
-        if menu_selection.isdigit():
+        if menu_selection.isdigit() and int(menu_selection) in menu_items:
             menu_selection = int(menu_selection)
-            if menu_selection in menu_items:
-                item_name = menu_items[menu_selection]["Item name"]
-                price = menu_items[menu_selection]["Price"]
+            item_name = menu_items[menu_selection]["Item name"]
+            price = menu_items[menu_selection]["Price"]
 
-                # Ask for quantity
-                quantity = input(f"How many {item_name}s would you like? (default is 1 if input is invalid) ")
+            # Ask for quantity
+            quantity = input(f"How many {item_name}s would you like? (default is 1 if input is invalid) ")
 
-                # Validate quantity input
-                if quantity.isdigit():
-                    quantity = int(quantity)
-                else:
-                    quantity = 1  # Default to 1 if invalid
-
-                # Add to the order list
-                order_list.append({"Item name": item_name, "Price": price, "Quantity": quantity})
-                print(f"{quantity} x {item_name} added to your order.")
-
-                # Step 6: Ask if the user wants to continue ordering
-                while True:
-                    keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ").lower()
-                    if keep_ordering in ['y', 'yes']:
-                        break
-                    elif keep_ordering in ['n', 'no']:
-                        place_order = False
-                        print("Thank you for your order.")
-                        break
-                    else:
-                        print("Invalid input, please enter Y or N.")
+            # Validate quantity input
+            if quantity.isdigit():
+                quantity = int(quantity)
             else:
-                print("Invalid menu selection.")
+                quantity = 1  # Default to 1 if invalid
+
+            # Add to the order list
+            order_list.append({"Item name": item_name, "Price": price, "Quantity": quantity})
+            print(f"{quantity} x {item_name} added to your order.")
+
+            # Step 6: Ask if the user wants to continue ordering
+            while True:
+                keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ").lower()
+                if keep_ordering in ['y', 'yes']:
+                    break
+                elif keep_ordering in ['n', 'no']:
+                    place_order = False
+                    print("Thank you for your order.")
+                    break
+                else:
+                    print("Invalid input, please enter Y or N.")
         else:
-            print("You didn't enter a number.")
+            print("Invalid menu selection.")
     else:
         print("Invalid menu category selection.")
 

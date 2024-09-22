@@ -30,7 +30,7 @@ User Confirmation for Quantity:
 
 4. ## Project Resources and Acknowledgments
 * **Class Material** : All concepts and techniques used to build the ordering system were studied in the course, including how to work with -
-ictionaries, loops, and input validation.
+dictionaries, loops, and input validation.
 * **Menu Support File:** The menu dictionary, provided as a support file during the course, was used as the primary dataset for the project.
 * **ChatGPT Assistance:** As an experienced data scientist, I used ChatGPT for help with syntax corrections and general optimizations. While the logic and structure of the project were independently developed, ChatGPT provided additional support to ensure clean and efficient code.
 

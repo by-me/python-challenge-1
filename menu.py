@@ -105,13 +105,15 @@ while place_order:
             price = menu_items[menu_selection]["Price"]
 
             # Ask for quantity
-            quantity = input(f"How many {item_name}s would you like? (default is 1 if input is invalid) ")
+            quantity = input(f"How many {item_name}s would you like?")
 
-            # Validate quantity input
-            if quantity.isdigit():
+            # Validate quantity input + ensure that the quantity must be at least 1
+            if quantity.isdigit() and int(quantity) >0:
                 quantity = int(quantity)
             else:
                 quantity = 1  # Default to 1 if invalid
+                print("Invalid quantity. Please enter a valid number.")
+
 
             # Add to the order list
             order_list.append({"Item name": item_name, "Price": price, "Quantity": quantity})

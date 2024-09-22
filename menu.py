@@ -1,9 +1,9 @@
 # Menu dictionary containing various categories and their items with prices
 menu = {
     "Snacks": {
-        "Cookie": .99,
-        "Banana": .69,
-        "Apple": .49,
+        "Cookie": 0.99,
+        "Banana": 0.69,
+        "Apple": 0.49,
         "Granola bar": 1.99
     },
     "Meals": {
@@ -87,11 +87,11 @@ while place_order:
         for key, value in menu[menu_category_name].items():
             if isinstance(value, dict):
                 for sub_key, sub_value in value.items():
-                    print(f"{i}      | {key} - {sub_key:<24} | ${sub_value:.2f}")
+                    print(f"{i:<7}| {key} - {sub_key:<24} | ${sub_value:.2f}")
                     menu_items[i] = {"Item name": f"{key} - {sub_key}", "Price": sub_value}
                     i += 1
             else:
-                print(f"{i}      | {key:<24} | ${value:.2f}")
+                print(f"{i:<7}| {key:<24} | ${value:.2f}")
                 menu_items[i] = {"Item name": key, "Price": value}
                 i += 1
 
